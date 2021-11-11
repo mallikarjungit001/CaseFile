@@ -3,9 +3,11 @@
 echo "Enter the path of the Directory"
 read path
 
-cd $path
 
-for i in ls
- do 
-   $i
- done
+if [ -d $path ]
+then
+     cd $path
+        ls -lrt
+else
+  echo "not found"
+fi
